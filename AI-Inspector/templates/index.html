@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Upload a File</title>
+</head>
+<body >
+    <div style="display: flex; height:100vh;;overflow: auto; justify-content: center; align-items: center;flex-direction: column; background-color: darkslategray;">
+    <h1>CodeChecker</h1>
+    <form action="/ai" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column; height: 15%; justify-content: space-around;">
+        <input type="file" name="file" required style="display: flex; justify-content: space-between;">
+        <input type="text" name="desc" placeholder="Project Describtion" required>
+        <input type="text" placeholder="Guidlines" name="principles">
+        <input type="submit">
+    </form>
+    {% if not answer %}
+    <span style="display: block; height: 30px"></span>
+    {% endif %}
+    {% if answer %}
+    <label for="answer">Answer:</label>
+    <textarea style="height: 300px , width: 350px;">{{answer}}</textarea>
+    {% elif error %}
+    <p class="error">Please Enter a valid Input</p>
+    {% endif %}
+    </div>    
+</body>
+</html>

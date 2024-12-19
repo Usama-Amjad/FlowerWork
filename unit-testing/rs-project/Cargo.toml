@@ -1,0 +1,22 @@
+[package]
+name = "testing-rust"
+version = "0.1.0"
+authors = ["pfried <philipsfried@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "factorial"
+path = "src/main.rs"
+
+[[bench]]
+name = "factorial_benchmark"
+harness = false
+
+[dependencies]
+
+
+[dev-dependencies]
+quickcheck = "0.9.0"
+quickcheck_macros = "0.8.0"
+criterion = "0.3.0"
+assert_cmd = "0.11.1"

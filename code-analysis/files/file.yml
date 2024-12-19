@@ -1,0 +1,34 @@
+# Application Configuration
+app:
+  name: MyApp
+  version: 1.0.0
+  environment: production
+
+# Database Configuration
+database:
+  host: localhost
+  port: 5432
+  name: myapp_db
+  user: admin
+  password: secret_password
+
+# Logging Configuration
+logging:
+  level: info
+  file: /var/log/myapp.log
+
+# Feature Toggles
+features:
+  enableFeatureX: true
+  enableFeatureY: false
+
+# Server Configuration
+server:
+  host: 0.0.0.0
+  port: 8080
+
+# List of API endpoints
+api_endpoints:
+  - /api/v1/users
+  - /api/v1/products
+  - /api/v1/orders
